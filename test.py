@@ -1,6 +1,6 @@
 
 
-boshka = ["cats", "in", "space"]
+
 
 
 def print_list(l, numbered = True, bullet_character = '-'):
@@ -20,8 +20,9 @@ def print_list(l, numbered = True, bullet_character = '-'):
         else:
             print("{} {}".format(bullet_character, element))
 
+boshka = ["cats", "in", "space"]
+empty_var = []
+for i, e in enumerate(boshka):
+    empty_var.append('{} {}'.format(i, e))
 
-
-
-
-print_list(boshka)
+print(empty_var)
