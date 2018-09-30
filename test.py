@@ -3,26 +3,19 @@
 
 
 
-def print_list(l, numbered = True, bullet_character = '-'):
-    """Prints a list on multiple lines, with numbers or bullets
-
-    Arguments:
-    l: The list to print
-    numbered: set to True to print a numbered list
-    bullet_character: The symbol placed before each list element. This is
-                      ignored if numbered is True.
-    """
 
 
-    for index, element in enumerate(l):
-        if numbered:
-            print("{}: {}".format(index+1, element))
-        else:
-            print("{} {}".format(bullet_character, element))
 
-boshka = ["cats", "in", "space"]
-empty_var = []
-for i, e in enumerate(boshka):
-    empty_var.append('{} {}'.format(i, e))
+# Quiz: Mutable Default Arguments:
 
-print(empty_var)
+
+def todo_list(new_task, base_list=['wake up']):
+    base_list.append(new_task)
+    return base_list
+
+
+
+
+
+
+print(todo_list('To feed Boshka', ['To change water for Boshka']))
