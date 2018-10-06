@@ -1,21 +1,22 @@
+# boshka = {'food': 'tuna', 'games': ['ball', 'rope', 'mouse'], 'communication': 'fubla'}
+#
+# def boshkaDeals():
+#     boshka["food"] = "ham"
+#     print(boshka)
+#
+# boshkaDeals()
 
+boshka_list = ['ball', 'rope', 'mouse']
+new_list = ["lagartija"]
 
+def calling_http(response):
+    count = response + 1
+    number(count)
 
+def number(count):
+    my_index = count + len(boshka_list)
+    return my_index
 
+boshka_list.append(new_list[number()])
 
-
-
-
-# Quiz: Mutable Default Arguments:
-
-
-def todo_list(new_task, base_list=['wake up']):
-    base_list.append(new_task)
-    return base_list
-
-
-
-
-
-
-print(todo_list('To feed Boshka', ['To change water for Boshka']))
+print(boshka_list)
