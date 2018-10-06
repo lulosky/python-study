@@ -1,22 +1,8 @@
-# boshka = {'food': 'tuna', 'games': ['ball', 'rope', 'mouse'], 'communication': 'fubla'}
-#
-# def boshkaDeals():
-#     boshka["food"] = "ham"
-#     print(boshka)
-#
-# boshkaDeals()
+egg_count = 0
 
-boshka_list = ['ball', 'rope', 'mouse']
-new_list = ["lagartija"]
+def buy_eggs():
+    global egg_count
+    egg_count = egg_count + 12 # purchase a dozen eggs
 
-def calling_http(response):
-    count = response + 1
-    number(count)
-
-def number(count):
-    my_index = count + len(boshka_list)
-    return my_index
-
-boshka_list.append(new_list[number()])
-
-print(boshka_list)
+buy_eggs()
+print(egg_count)
