@@ -1,12 +1,12 @@
 
-
+from threading import Timer
 
 def boshka(amount, callback ):
-    for i in range(0, 3000):
-        print(i)
-    finish = 'This program has finished running'
+    async def callToExternal():
+         for i in range(0, 100):
+             print(i)
+    Timer(15, callToExternal)
+    finish = 'boshka is mad want eat and meaows'
     callback(finish)
-
-
 
 boshka(49, lambda finish: print(finish))
