@@ -1,8 +1,12 @@
-egg_count = 0
 
-def buy_eggs():
-    global egg_count
-    egg_count = egg_count + 12 # purchase a dozen eggs
 
-buy_eggs()
-print(egg_count)
+
+def boshka(amount, callback ):
+    for i in range(0, 3000):
+        print(i)
+    finish = 'This program has finished running'
+    callback(finish)
+
+
+
+boshka(49, lambda finish: print(finish))
