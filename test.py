@@ -1,12 +1,19 @@
+def felixon(word):
+    response = '{} I see and I like Meow sometimes'.format(word)
+    return response
 
-from threading import Timer
+def FoodOfCat(word):
+    catFood = '{} eat tuna and bones'.format(word)
+    return catFood
 
-def boshka(amount, callback ):
-    async def callToExternal():
-         for i in range(0, 100):
-             print(i)
-    Timer(15, callToExternal)
-    finish = 'boshka is mad want eat and meaows'
-    callback(finish)
 
-boshka(49, lambda finish: print(finish))
+def boshka(word, callback):
+    groupWords = "{} I'm Boshka and I like to".format(word)
+    amountOfLetters = str(len(groupWords))
+    response = felixon(groupWords)
+    catFood = FoodOfCat(groupWords)
+    callback(groupWords, amountOfLetters, response, catFood)
+
+
+
+boshka('hello', lambda a, b, c, d: print('{} Meow'.format(a), '**The amount of letters is {}**'.format(b), 'Response from Felixon: {}'.format(c), 'Answer from BoshkaNieves {}'.format(d)))
