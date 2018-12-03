@@ -1,21 +1,35 @@
-# Create a function with 1 argument that determine if a number is able to devide by 3 and 5
-# a number able to devide by 3 and 5 have to return Boshka Nieves
-# a number only able to devide by 3 return Boshka
-# a number only able to devide by 5 return Nieves
-# print the result to the terminal
+# Create a function, inside create a for loop that can
+# count NUMBERS UP from the next variable
+
+number_up = 0
+
+# for the next list create a function that can count the total
+# amount of elements inside the list
 
 
-def homework(argument):
+
+element = ['boshka', 'tuna', 9, True, 'crispies', 'hunt', 'lizard']
+
+def total():
+    amount_list = 0
+    for i in element:
+        amount_list = amount_list + 1
+    print(amount_list)
 
 
 
-    if argument % 3 == 0 and argument % 5 == 0:
-        return "Boshka Nieves"
-    elif argument % 3 == 0:
-        return "Boshka"
-
-    elif argument % 5 == 0:
-        return "Nieves"
 
 
-print(homework(5))
+
+total()
+
+
+def counter():
+
+    number_up = 0
+
+    for i in range(8):
+        number_up = number_up + 1
+    print(number_up)
+
+counter()
