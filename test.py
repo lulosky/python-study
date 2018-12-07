@@ -1,35 +1,62 @@
-# Create a function, inside create a for loop that can
-# count NUMBERS UP from the next variable
 
-number_up = 0
+# boshka = {'tuna': 20, 'crispies': 100, 'eat': True }
+def reset(theDayList):
+    for i in theDayList:
+        if i['tuna']:
+            i['tuna'] = 0
+        if i['crispies']:
+            i['crispies'] = 0
+        if i['eat']:
+            i['eat'] = False
+    return theDayList
 
-# for the next list create a function that can count the total
-# amount of elements inside the list
+def setEatTimes(tuna, crispies, eat, day, foodTimes):
 
-
-
-element = ['boshka', 'tuna', 9, True, 'crispies', 'hunt', 'lizard']
-
-def total():
-    amount_list = 0
-    for i in element:
-        amount_list = amount_list + 1
-    print(amount_list)
+    boshka = reset(foodTimes)
 
 
 
+    dayOfWeek = boshka[day]
+
+    dayOfWeek['tuna'] = tuna
+    dayOfWeek['crispies'] = crispies
+    dayOfWeek['eat'] = eat
+
+    # boshka.append(dayOfWeek)
+    boshka[0] = dayOfWeek
+    print(boshka)
 
 
 
-total()
+
+    # print(dayOfWeek)
+
+def check(tuna, crispies, eat, day):
+    # this list represent each day of the week
+    boshka = [
+    {'tuna': 20, 'crispies': 100, 'eat': True },
+    {'tuna': 20, 'crispies': 100, 'eat': True },
+    {'tuna': 20, 'crispies': 100, 'eat': True },
+    {'tuna': 20, 'crispies': 100, 'eat': True },
+    {'tuna': 20, 'crispies': 100, 'eat': True },
+    {'tuna': 20, 'crispies': 100, 'eat': True },
+    {'tuna': 20, 'crispies': 100, 'eat': True }
+    ]
+    setEatTimes(tuna, crispies, eat, day, boshka)
+    # dic = boshka[2]
+    # dic['eat'] = False
 
 
-def counter():
+#     for i in boshka:
+#         if i == 'eat':
+#             boshka[i] = False
+#         elif i == 'tuna':
+#             boshka[i] = 0
+#         elif i == 'crispies':
+#             boshka[i] = 0
 
-    number_up = 0
+# boshka['tuna'] = 0
+# boshka['crispies'] = 0
+# boshka['eat'] = False
 
-    for i in range(8):
-        number_up = number_up + 1
-    print(number_up)
-
-counter()
+check(900, 400, True, 6)
