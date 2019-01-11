@@ -1,32 +1,28 @@
-upandDown = {
-    'boolean': ''
-}
-
-def dataBaseRead():
-    with open('boshka.txt', 'r') as f:
-        boshka = f.read()
-
-        if boshka == 'False' or '':
-            upandDown['boolean'] = False
-        elif boshka == 'True':
-            upandDown['boolean'] = True
+from random import choice, random
 
 
-def dataBaseWrite():
-    with open('boshka.txt', 'w') as v:
-        boshka = v.write(str(upandDown['boolean']))
+def generate_password():
+    with open('words.txt', 'r') as f:
+        words = f.read()
+        listOfWords = words.split()
+        # randomWord = choice(listOfWords)
+        lengthOfList = len(listOfWords)
+        word1 = None
+        word2 = None
+        word3 = None
+           
+        for i in range(3):       
+            
+            randomNumber = random()
+            randomIndex = int(randomNumber * lengthOfList)
+            
+            if i == 0:
+                word1 = listOfWords[randomIndex]
+            elif i == 1:
+                word2 = listOfWords[randomIndex] 
+            elif i == 2:
+                word3 = listOfWords[randomIndex] 
 
-
-
-def change():
-
-    dataBaseRead()
-
-
-    upandDown['boolean'] =  not upandDown['boolean']
-
-    dataBaseWrite()
-
-    print(upandDown['boolean'])
-
-change()
+        password = '{}{}{}' .format(word1, word2, word3)    
+        return password.lower()
+generate_password()
